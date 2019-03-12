@@ -1,0 +1,44 @@
+Name: Student_Name
+USC ID: 0123456789
+News site crawled: newsday.com
+
+Fetch Statistics
+================
+# fetches attempted: 19992
+# fetches succeeded: 15773
+# fetches aborted: 4070
+# fetches failed: 149
+
+Outgoing URLs:
+==============
+Total URLs extracted: 2318062
+# unique URLs extracted: 543271
+# unique URLs within News Site: 102310
+# unique URLs outside News Site: 440961
+
+Status Codes:
+=============
+200 OK: 15773
+301 Moved Permanently: 4033
+302 Found: 35
+404 Not Found: 149
+503 Service Unavailable: 2
+
+File Sizes:
+===========
+< 1KB: 9
+1KB ~ <10KB: 526
+10KB ~ <100KB: 14116
+100KB ~ <1MB: 1122
+
+Content Types:
+==============
+text/html: 13938
+image/gif: 1
+image/jpeg: 1814
+image/png: 19
+image/x-icon: 1
+
+
+
+
