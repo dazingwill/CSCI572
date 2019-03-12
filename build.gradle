@@ -1,0 +1,28 @@
+group 'com.ivo.csci572'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core
+    compile group: 'org.apache.hadoop', name: 'hadoop-core', version: '1.2.1'
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common
+    compile group: 'org.apache.hadoop', name: 'hadoop-common', version: '3.0.0'
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs
+    compile group: 'org.apache.hadoop', name: 'hadoop-hdfs', version: '3.0.0'
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-client
+    compile group: 'org.apache.hadoop', name: 'hadoop-client', version: '3.0.0'
+
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
