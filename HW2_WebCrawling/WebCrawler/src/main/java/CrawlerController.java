@@ -8,7 +8,6 @@ import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 public class CrawlerController {
 
     public static void main(String[] args) throws Exception {
-
         String crawlStorageFolder = "./data/crawl";
         int numberOfCrawlers = 16;
         CrawlConfig config = new CrawlConfig();
@@ -33,9 +32,4 @@ public class CrawlerController {
         /* Start the crawl */
         controller.start(MyCrawler.class, numberOfCrawlers);
     }
-
-
-
-
-
 }
