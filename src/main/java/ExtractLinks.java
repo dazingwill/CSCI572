@@ -13,8 +13,9 @@ import java.util.Set;
 public class ExtractLinks {
 
     public static void main(String[] args) throws IOException {
-        String dirPath = "[Your path]\\Newsday\\HTML Files";
-        String mapFilePath = "[Your path]\\Newsday\\UrlToHtml_Newday.csv";
+        String dirPath = "./data/HTML Files";
+        String mapFilePath = "./data/UrlToHtml_Newday.csv";
+        String outputFilePath = "./data/edgeList.txt";
 
         Map<String, String> fileUrlMap = new HashMap<>();
         Map<String, String> urlFileMap = new HashMap<>();
@@ -27,18 +28,12 @@ public class ExtractLinks {
         }
         csvReader.close();
 
-
-        File outputFile = new File("edgeList.txt");
-        PrintWriter writer = new PrintWriter(new FileOutputStream(outputFile));
-
         File dir = new File(dirPath);
         Set<String> edges = new HashSet<>();
 
-        for(File file: dir.listFiles())
-        {
+        for(File file: dir.listFiles()) {
             Document doc = Jsoup.parse(file, "UTF-8", fileUrlMap.get(file.getName()));
             Elements links = doc.select("a[href]");
-            //Elements pngs = doc.select("[src]");
 
             for(Element link: links){
                 String url = link.attr("abs:href").trim();
@@ -48,14 +43,13 @@ public class ExtractLinks {
             }
         }
 
+        File outputFile = new File(outputFilePath);
+        PrintWriter writer = new PrintWriter(new FileOutputStream(outputFile));
         for(String s: edges){
             writer.println(s);
         }
         writer.flush();
         writer.close();
     }
-
-
-
 
 }
