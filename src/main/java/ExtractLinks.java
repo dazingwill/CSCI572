@@ -17,9 +17,9 @@ public class ExtractLinks {
         String mapFilePath = "./data/UrlToHtml_Newday.csv";
         String outputFilePath = "./data/edgeList.txt";
 
+        // Read mapping relationships between file name and URL
         Map<String, String> fileUrlMap = new HashMap<>();
         Map<String, String> urlFileMap = new HashMap<>();
-
         CSVReader csvReader = new CSVReader(new FileReader(mapFilePath));
         String[] csvRow;
         while ((csvRow = csvReader.readNext()) != null) {
@@ -28,13 +28,12 @@ public class ExtractLinks {
         }
         csvReader.close();
 
+        /* Extract links */
         File dir = new File(dirPath);
         Set<String> edges = new HashSet<>();
-
         for(File file: dir.listFiles()) {
             Document doc = Jsoup.parse(file, "UTF-8", fileUrlMap.get(file.getName()));
             Elements links = doc.select("a[href]");
-
             for(Element link: links){
                 String url = link.attr("abs:href").trim();
                 if(urlFileMap.containsKey(url)) {
