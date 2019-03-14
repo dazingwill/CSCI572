@@ -20,13 +20,27 @@ Code has been slightly modified from the version I submitted.
 
 **Input files**
 
-*-data/HTML Files* : Folder of all the webpages. This repo only contains 10 pages, full data can be found in refers.
+* *data/HTML Files* :
 
-*-data/UrlToHtml_Newday.csv* : mapping file
+  Folder of all the webpages. This repo only contains 10 sample pages, full data can be found in refers.
+
+* *data/UrlToHtml_Newday.csv* :
+
+  Map file name to URL. Format:
+
+  ```
+  [file name], [URL]
+  ```
 
 **Output file**
 
-*-data/edgeList.txt* : edges file prepared for PageRank
+* *data/edgeList.txt* : 
+
+  Edges file prepared for PageRank. Format:
+
+  ```
+  [URL1] [URL2]
+  ```
 
 ## Refers
 
