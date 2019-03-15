@@ -14,7 +14,7 @@ Non programming assignment.
 
 ## Assignment 2
 
-a web crawler to download web pages from the pre-selected news websites.
+A web crawler to download web pages from the pre-selected news websites.
 
 https://github.com/dazingwill/WebCrawler
 
@@ -33,3 +33,5 @@ https://github.com/dazingwill/SolrSearchEngine
 https://github.com/dazingwill/TikaExtractText
 
 https://github.com/dazingwill/ExtractUrl
+
+https://github.com/dazingwill/CSCI572/tree/master/HW4%265_SearchEngineUsingSolr/PageRank
