@@ -66,9 +66,6 @@ class SpellCorrector {
 	private static function train(array $features) {
 		$model = array();
 		$count = count($features);
-        $fp = fopen("test.txt","w+");
-		fwrite($fp,$count . "asd");
-		fclose($fp);
 		for($i = 0; $i<$count; $i++) {
 			$f = $features[$i];
 			$model[$f] +=1;
