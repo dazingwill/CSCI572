@@ -46,3 +46,6 @@ Code has been slightly modified from the version I submitted.
 
 Web Pages Data: https://drive.google.com/drive/folders/1ZPWjQZMB7xeegjaeZfzqeJKq9oKuukio 
 
+https://jsoup.org/
+
+http://opencsv.sourceforge.net/
